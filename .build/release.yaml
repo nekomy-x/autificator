@@ -1,0 +1,66 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "App-arm64-apple-macosx26.0-release.module": ["<App-arm64-apple-macosx26.0-release.module>"]
+  "Autificator-arm64-apple-macosx26.0-release.exe": ["<Autificator-arm64-apple-macosx26.0-release.exe>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<App-arm64-apple-macosx26.0-release.module>","<Autificator-arm64-apple-macosx26.0-release.exe>"]
+  "test": ["<App-arm64-apple-macosx26.0-release.module>","<Autificator-arm64-apple-macosx26.0-release.exe>"]
+default: "main"
+nodes:
+  "/Users/nekomy/Project/autificator/Sources/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/nekomy/Project/autificator/Sources/Account.swift","/Users/nekomy/Project/autificator/Sources/AccountRowView.swift","/Users/nekomy/Project/autificator/Sources/AccountsManager.swift","/Users/nekomy/Project/autificator/Sources/AddAccountSheet.swift","/Users/nekomy/Project/autificator/Sources/AppDelegate.swift","/Users/nekomy/Project/autificator/Sources/ContentView.swift","/Users/nekomy/Project/autificator/Sources/KeychainManager.swift","/Users/nekomy/Project/autificator/Sources/TOTPGenerator.swift","/Users/nekomy/Project/autificator/Sources/main.swift"]
+    outputs: ["/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/sources"]
+    description: "Write auxiliary file /Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/sources"
+
+  "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/Autificator.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/Account.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountRowView.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountsManager.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AddAccountSheet.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AppDelegate.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/ContentView.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/KeychainManager.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/TOTPGenerator.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/main.swift.o"]
+    outputs: ["/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/Autificator.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/Autificator.product/Objects.LinkFileList"
+
+  "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<App-arm64-apple-macosx26.0-release.module>":
+    tool: phony
+    inputs: ["/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/Account.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountRowView.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountsManager.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AddAccountSheet.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AppDelegate.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/ContentView.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/KeychainManager.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/TOTPGenerator.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/main.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/Modules/App.swiftmodule"]
+    outputs: ["<App-arm64-apple-macosx26.0-release.module>"]
+
+  "<Autificator-arm64-apple-macosx26.0-release.exe>":
+    tool: phony
+    inputs: ["/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/Autificator"]
+    outputs: ["<Autificator-arm64-apple-macosx26.0-release.exe>"]
+
+  "C.App-arm64-apple-macosx26.0-release.module":
+    tool: shell
+    inputs: ["/Users/nekomy/Project/autificator/Sources/Account.swift","/Users/nekomy/Project/autificator/Sources/AccountRowView.swift","/Users/nekomy/Project/autificator/Sources/AccountsManager.swift","/Users/nekomy/Project/autificator/Sources/AddAccountSheet.swift","/Users/nekomy/Project/autificator/Sources/AppDelegate.swift","/Users/nekomy/Project/autificator/Sources/ContentView.swift","/Users/nekomy/Project/autificator/Sources/KeychainManager.swift","/Users/nekomy/Project/autificator/Sources/TOTPGenerator.swift","/Users/nekomy/Project/autificator/Sources/main.swift","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/sources"]
+    outputs: ["/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/Account.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountRowView.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountsManager.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AddAccountSheet.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AppDelegate.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/ContentView.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/KeychainManager.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/TOTPGenerator.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/main.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/Modules/App.swiftmodule"]
+    description: "Compiling Swift Module 'App' (9 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","App","-emit-dependencies","-emit-module","-emit-module-path","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/Modules/App.swiftmodule","-output-file-map","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/output-file-map.json","-whole-module-optimization","-num-threads","10","-c","@/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/sources","-I","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/Modules","-target","arm64-apple-macosx14.0","-whole-module-optimization","-num-threads","10","-serialize-diagnostics","-O","-j10","-DSWIFT_PACKAGE","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","App_main","-swift-version","5","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","autificator"]
+
+  "C.Autificator-arm64-apple-macosx26.0-release.exe":
+    tool: shell
+    inputs: ["/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/Account.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountRowView.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountsManager.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AddAccountSheet.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AppDelegate.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/ContentView.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/KeychainManager.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/TOTPGenerator.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/main.swift.o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/Autificator.product/Objects.LinkFileList"]
+    outputs: ["/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/Autificator"]
+    description: "Linking ./.build/arm64-apple-macosx/release/Autificator"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release","-o","/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/Autificator","-module-name","Autificator","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-dead_strip","-Xlinker","-alias","-Xlinker","_App_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/Autificator.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx14.0","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/nekomy/Project/autificator/Sources/","/Users/nekomy/Project/autificator/Package.swift","/Users/nekomy/Project/autificator/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

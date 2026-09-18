@@ -1,0 +1,61 @@
+{
+  "": {
+    "dependencies": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/App.d",
+    "object": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/App.o",
+    "swift-dependencies": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/master.swiftdeps"
+  },
+  "/Users/nekomy/Project/autificator/Sources/Account.swift": {
+    "object": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/Account.swift.o",
+    "swiftmodule": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/Account~partial.swiftmodule",
+    "swift-dependencies": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/Account.swiftdeps",
+    "diagnostics": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/Account.dia"
+  },
+  "/Users/nekomy/Project/autificator/Sources/AccountRowView.swift": {
+    "object": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountRowView.swift.o",
+    "swiftmodule": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountRowView~partial.swiftmodule",
+    "swift-dependencies": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountRowView.swiftdeps",
+    "diagnostics": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountRowView.dia"
+  },
+  "/Users/nekomy/Project/autificator/Sources/AccountsManager.swift": {
+    "object": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountsManager.swift.o",
+    "swiftmodule": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountsManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountsManager.swiftdeps",
+    "diagnostics": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AccountsManager.dia"
+  },
+  "/Users/nekomy/Project/autificator/Sources/AddAccountSheet.swift": {
+    "object": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AddAccountSheet.swift.o",
+    "swiftmodule": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AddAccountSheet~partial.swiftmodule",
+    "swift-dependencies": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AddAccountSheet.swiftdeps",
+    "diagnostics": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AddAccountSheet.dia"
+  },
+  "/Users/nekomy/Project/autificator/Sources/AppDelegate.swift": {
+    "object": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AppDelegate.swift.o",
+    "swiftmodule": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AppDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AppDelegate.swiftdeps",
+    "diagnostics": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/AppDelegate.dia"
+  },
+  "/Users/nekomy/Project/autificator/Sources/ContentView.swift": {
+    "object": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/ContentView.swift.o",
+    "swiftmodule": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/ContentView.swiftdeps",
+    "diagnostics": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/ContentView.dia"
+  },
+  "/Users/nekomy/Project/autificator/Sources/KeychainManager.swift": {
+    "object": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/KeychainManager.swift.o",
+    "swiftmodule": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/KeychainManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/KeychainManager.swiftdeps",
+    "diagnostics": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/KeychainManager.dia"
+  },
+  "/Users/nekomy/Project/autificator/Sources/TOTPGenerator.swift": {
+    "object": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/TOTPGenerator.swift.o",
+    "swiftmodule": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/TOTPGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/TOTPGenerator.swiftdeps",
+    "diagnostics": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/TOTPGenerator.dia"
+  },
+  "/Users/nekomy/Project/autificator/Sources/main.swift": {
+    "object": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/main.swift.o",
+    "swiftmodule": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/main.swiftdeps",
+    "diagnostics": "/Users/nekomy/Project/autificator/.build/arm64-apple-macosx/release/App.build/main.dia"
+  }
+}

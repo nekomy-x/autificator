@@ -1,0 +1,39 @@
+name: Autificator
+options:
+  bundleIdPrefix: com.autificator
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "15.0"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    CODE_SIGN_IDENTITY: "-"
+    CODE_SIGN_STYLE: Manual
+    DEVELOPMENT_TEAM: ""
+    ENABLE_HARDENED_RUNTIME: YES
+    COMBINE_HIDPI_IMAGES: YES
+
+targets:
+  Autificator:
+    type: application
+    platform: macOS
+    sources:
+      - path: Autificator
+        excludes:
+          - "**/.DS_Store"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.autificator.app
+        INFOPLIST_FILE: Autificator/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Autificator/Autificator.entitlements
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        PRODUCT_NAME: Autificator
+        GENERATE_INFOPLIST_FILE: NO
+        SWIFT_EMIT_LOC_STRINGS: YES
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+    entitlements:
+      path: Autificator/Autificator.entitlements
